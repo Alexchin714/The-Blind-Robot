@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Flying Campfire.ogg-eb3b633c33aff2d6874dedf2b22346b2.oggstr"
+
+[deps]
+
+source_file="res://Music/Flying Campfire.ogg"
+dest_files=[ "res://.import/Flying Campfire.ogg-eb3b633c33aff2d6874dedf2b22346b2.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
