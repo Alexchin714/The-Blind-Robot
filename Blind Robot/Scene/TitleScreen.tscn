@@ -1,0 +1,508 @@
+[gd_scene load_steps=15 format=2]
+
+[ext_resource path="res://Font/blindRobot.otf" type="DynamicFontData" id=1]
+[ext_resource path="res://Art/tbr_titleText.png" type="Texture" id=2]
+[ext_resource path="res://Art/tbr_theblindrobotbg.png" type="Texture" id=3]
+[ext_resource path="res://Music/Eyes of the Machine.ogg" type="AudioStream" id=4]
+[ext_resource path="res://Art/tbr_roboticSilouhette.png" type="Texture" id=5]
+[ext_resource path="res://Script/TitleScreen.gd" type="Script" id=6]
+
+[sub_resource type="DynamicFont" id=1]
+size = 56
+use_filter = true
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 48
+use_filter = true
+font_data = ExtResource( 1 )
+
+[sub_resource type="Animation" id=3]
+resource_name = "hl01"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("Container/Button/Start/bg01:rect_scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 0.08, 1 ),
+"update": 0,
+"values": [ Vector2( 0.4, 1e-05 ), Vector2( 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Container/Button/Start/Label:custom_colors/font_color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 0.08, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 0, 0, 0, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Container/Button/Start:rect_rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 0.08, 1 ),
+"update": 0,
+"values": [ 0.0, -5.0 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Container/Button/Start:rect_scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 0.08, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 1.25, 1.25 ) ]
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "hl01B"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("Container/Button/Start/bg01:rect_scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 0.08, 0.08 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 0.4, 1e-05 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Container/Button/Start/Label:custom_colors/font_color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 0.08, 0.08 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 1 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Container/Button/Start:rect_rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 0.08, 0.08 ),
+"update": 0,
+"values": [ -5.0, 0.0 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Container/Button/Start:rect_scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 0.08, 0.08 ),
+"update": 0,
+"values": [ Vector2( 1.25, 1.25 ), Vector2( 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=5]
+resource_name = "hl02"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("Container/Button/Options/bg02:rect_scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 0.08, 1 ),
+"update": 0,
+"values": [ Vector2( 0.4, 1e-05 ), Vector2( 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Container/Button/Options/Label:custom_colors/font_color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 0.08, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 0, 0, 0, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Container/Button/Options:rect_rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 0.08, 1 ),
+"update": 0,
+"values": [ 0.0, -5.0 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Container/Button/Options:rect_scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 0.08, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 1.25, 1.25 ) ]
+}
+
+[sub_resource type="Animation" id=6]
+resource_name = "hl02B"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("Container/Button/Options/bg02:rect_scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 0.08, 0.08 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 0.4, 1e-05 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Container/Button/Options/Label:custom_colors/font_color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 0.08, 0.08 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 1 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Container/Button/Options:rect_rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 0.08, 0.08 ),
+"update": 0,
+"values": [ -5.0, 0.0 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Container/Button/Options:rect_scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 0.08, 0.08 ),
+"update": 0,
+"values": [ Vector2( 1.25, 1.25 ), Vector2( 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=7]
+resource_name = "hl03"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("Container/Button/Exit/bg03:rect_scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 0.08, 1 ),
+"update": 0,
+"values": [ Vector2( 0.4, 1e-05 ), Vector2( 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Container/Button/Exit/Label:custom_colors/font_color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 0.08, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 0, 0, 0, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Container/Button/Exit:rect_scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 0.08, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 1.25, 1.25 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Container/Button/Exit:rect_rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 0.08, 1 ),
+"update": 0,
+"values": [ 0.0, -5.0 ]
+}
+
+[sub_resource type="Animation" id=8]
+resource_name = "hl03B"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("Container/Button/Exit/bg03:rect_scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 0.08, 0.08 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 0.4, 1e-05 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Container/Button/Exit/Label:custom_colors/font_color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 0.08, 0.08 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 1 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Container/Button/Exit:rect_scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 0.08, 0.08 ),
+"update": 0,
+"values": [ Vector2( 1.25, 1.25 ), Vector2( 1, 1 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Container/Button/Exit:rect_rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 0.08, 0.08 ),
+"update": 0,
+"values": [ -5.0, 0.0 ]
+}
+
+[node name="TitleScreen" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Background" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_bottom = 2.0
+mouse_filter = 2
+texture = ExtResource( 3 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="tbr_roboticSilouhette" type="Sprite" parent="Background"]
+position = Vector2( 640, 480 )
+scale = Vector2( 0.66, 0.66 )
+texture = ExtResource( 5 )
+
+[node name="Container" type="Node2D" parent="."]
+
+[node name="Label" type="TextureRect" parent="Container"]
+margin_left = 64.0
+margin_top = 64.0
+margin_right = 540.0
+margin_bottom = 272.0
+texture = ExtResource( 2 )
+expand = true
+stretch_mode = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Node2D" parent="Container"]
+
+[node name="Start" type="TextureButton" parent="Container/Button"]
+margin_left = 80.0
+margin_top = 336.0
+margin_right = 464.0
+margin_bottom = 400.0
+expand = true
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Container/Button/Start"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_bottom = -64.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "Start"
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="bg01" type="ColorRect" parent="Container/Button/Start"]
+show_behind_parent = true
+margin_left = -80.0
+margin_right = 288.0
+margin_bottom = 64.0
+rect_scale = Vector2( 0.4, 1e-05 )
+mouse_filter = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Options" type="TextureButton" parent="Container/Button"]
+margin_left = 80.0
+margin_top = 416.0
+margin_right = 464.0
+margin_bottom = 480.0
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Container/Button/Options"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "Options"
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="bg02" type="ColorRect" parent="Container/Button/Options"]
+show_behind_parent = true
+margin_left = -80.0
+margin_right = 288.0
+margin_bottom = 64.0
+rect_scale = Vector2( 0.4, 1e-05 )
+mouse_filter = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Exit" type="TextureButton" parent="Container/Button"]
+margin_left = 80.0
+margin_top = 496.0
+margin_right = 464.0
+margin_bottom = 560.0
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Container/Button/Exit"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "Exit"
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="bg03" type="ColorRect" parent="Container/Button/Exit"]
+show_behind_parent = true
+margin_left = -80.0
+margin_right = 288.0
+margin_bottom = 64.0
+rect_scale = Vector2( 0.4, 1e-05 )
+mouse_filter = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="owner" type="Label" parent="Container"]
+margin_left = 1061.0
+margin_top = 638.0
+margin_right = 1246.0
+margin_bottom = 688.0
+custom_fonts/font = SubResource( 2 )
+text = "FurizAlex"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/hl01 = SubResource( 3 )
+anims/hl01B = SubResource( 4 )
+
+[node name="AnimationPlayer2" type="AnimationPlayer" parent="."]
+anims/hl02 = SubResource( 5 )
+anims/hl02B = SubResource( 6 )
+
+[node name="AnimationPlayer3" type="AnimationPlayer" parent="."]
+anims/hl03 = SubResource( 7 )
+anims/hl03B = SubResource( 8 )
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+autoplay = true
+bus = "Music"
+
+[connection signal="mouse_entered" from="Container/Button/Start" to="." method="_on_Start_mouse_entered"]
+[connection signal="mouse_exited" from="Container/Button/Start" to="." method="_on_Start_mouse_exited"]
+[connection signal="pressed" from="Container/Button/Start" to="." method="_on_Start_pressed"]
+[connection signal="mouse_entered" from="Container/Button/Options" to="." method="_on_Options_mouse_entered"]
+[connection signal="mouse_exited" from="Container/Button/Options" to="." method="_on_Options_mouse_exited"]
+[connection signal="pressed" from="Container/Button/Options" to="." method="_on_Options_pressed"]
+[connection signal="mouse_entered" from="Container/Button/Exit" to="." method="_on_Exit_mouse_entered"]
+[connection signal="mouse_exited" from="Container/Button/Exit" to="." method="_on_Exit_mouse_exited"]
+[connection signal="pressed" from="Container/Button/Exit" to="." method="_on_Exit_pressed"]

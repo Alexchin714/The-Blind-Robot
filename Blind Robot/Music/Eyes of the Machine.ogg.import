@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Eyes of the Machine.ogg-7877630c1c863d0b4a5bf14f615cc23f.oggstr"
+
+[deps]
+
+source_file="res://Music/Eyes of the Machine.ogg"
+dest_files=[ "res://.import/Eyes of the Machine.ogg-7877630c1c863d0b4a5bf14f615cc23f.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
