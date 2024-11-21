@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Memorial.ogg-e39de27dd41daa4d8ac82387a9c113ca.oggstr"
+
+[deps]
+
+source_file="res://Music/Memorial.ogg"
+dest_files=[ "res://.import/Memorial.ogg-e39de27dd41daa4d8ac82387a9c113ca.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

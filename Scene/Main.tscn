@@ -1,0 +1,35 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Textures/Pebbles_007_COLOR.jpg" type="Texture" id=2]
+
+[sub_resource type="CubeMesh" id=7]
+size = Vector3( 700, 2, 700 )
+
+[sub_resource type="SpatialMaterial" id=8]
+albedo_texture = ExtResource( 2 )
+uv1_triplanar = true
+
+[sub_resource type="ProceduralSky" id=6]
+sky_top_color = Color( 0.941176, 0.941176, 0.941176, 1 )
+ground_horizon_color = Color( 0.839216, 0.917647, 0.980392, 1 )
+
+[sub_resource type="Environment" id=3]
+background_mode = 2
+background_sky = SubResource( 6 )
+
+[node name="Main" type="Spatial"]
+
+[node name="Terrain" type="Spatial" parent="."]
+
+[node name="tbr_landscape" type="Spatial" parent="Terrain"]
+transform = Transform( 0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 0, 0 )
+
+[node name="Light" type="Spatial" parent="Terrain/tbr_landscape"]
+transform = Transform( -0.290865, 0.566393, 0.771101, -0.0551891, 0.794672, -0.604525, -0.955171, -0.218391, -0.199883, 4.07625, 22.2529, -1.00545 )
+
+[node name="MeshInstance" type="MeshInstance" parent="Terrain/tbr_landscape"]
+mesh = SubResource( 7 )
+material/0 = SubResource( 8 )
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource( 3 )
